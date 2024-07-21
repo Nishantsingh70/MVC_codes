@@ -1,0 +1,25 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Person.aspx.cs" Inherits="ASP_web_application.Person" %>
+
+<%@ Register Src="~/Control/Menu.ascx" TagName="Menu" TagPrefix="ucl" %>
+<%@ Register Src="~/Control/Footer.ascx" TagName="Footer" TagPrefix="ucl" %>
+
+<html>
+    <head runat="server">
+        <title></title>
+        <asp:ContentPlaceHolder ID="head" runat="server">
+
+        </asp:ContentPlaceHolder>
+        <webopt:bundlereference runat="server" path="~/Content/css" />
+    </head>
+    <body>
+        <form id="form1" runat="server">
+            <ucl:Menu ID="Menu1" runat="server"></ucl:Menu>
+            <div>
+                <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+                </asp:ContentPlaceHolder>
+            </div>
+            <ucl:Footer ID="Footer1" runat="server"></ucl:Footer>
+        </form>
+    </body>
+</html>
